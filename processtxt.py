@@ -30,7 +30,7 @@ def processTXT(filename):
     with open(filename, 'r') as f:
         data = f.read().replace('\n', '')
 
-    data = data.split('.')
+    data = data.strip().split('.')
     data.remove('')
     
     data = list(map(remPunc, data))
@@ -38,5 +38,3 @@ def processTXT(filename):
     data = list(map(remStopWords, data))
 
     return data
-
-#print(processTXT("testfile1.txt"))

@@ -7,12 +7,13 @@ def lcs(str1, str2, len1=0, len2=0):
     else:
         return max(lcs(str1, str2, len1+1, len2), lcs(str1, str2, len1, len2+1))
 
-def getSimilarity(data1, data2):
-    sim = []
+def getLCSSim(data1, data2):
+    simlist = []
     for i in data1:
         for j in data2:
             l1 = i.split()
             l2 = j.split()
-            sim.append(lcs(l1, l2) / min(len(l1), len(l2)))
+            simlist.append(lcs(l1, l2) / min(len(l1), len(l2)))
     
+    sim = sum(simlist)/len(simlist)*100
     return sim
