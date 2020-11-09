@@ -1,3 +1,4 @@
+# merge function to merge 2 sorted lists together, used with mergeSort()
 def merge(list1, list2):
     i = 0
     j = 0
@@ -13,6 +14,7 @@ def merge(list1, list2):
 
     return merged + list1[i:] + list2[j:]
 
+# recursive merge sort algorithm to sort a list in O(nlogn) time
 def mergeSort(l):
     if len(l) <= 1:
         return l
@@ -22,6 +24,7 @@ def mergeSort(l):
 
     return merge(left, right)
 
+# binary search function to search the sorted list of sentences
 def binarySearch(alist, start, end, val):
     if start >= end:
         return alist[start] == val
@@ -35,10 +38,13 @@ def binarySearch(alist, start, end, val):
         else:
             return binarySearch(alist, start, mid-1, val)
 
+# searches for sentence matches using binary search
 def getBinarySim(data1, data2):
+    # sort data2
     data2 = mergeSort(data2)
 
     count = 0
+    # loop through data1 and use binarySearch() to check for a matching sentence and increment count if a match is found
     for i in data1:
         if binarySearch(data2, 0, len(data2)-1, i):
             count += 1
