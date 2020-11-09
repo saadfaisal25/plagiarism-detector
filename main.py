@@ -60,7 +60,7 @@ def main():
             print("""
 a. Sentence Matching
 b. Sentence Matching using Binary Search
-c. Longest Common Subsequence
+c. Longest Common Subsequence (DO NOT RUN for files with more than 10 sentences, takes too much time)
 d. Rabin Karp
 e. Cosine Similarity
 f. Jaccard Similarity
@@ -92,7 +92,7 @@ f. Jaccard Similarity
             print("""
 a. Sentence Matching
 b. Sentence Matching using Binary Search
-c. Longest Common Subsequence
+c. Longest Common Subsequence (DO NOT RUN for files with more than 10 sentences, takes too much time)
 d. Rabin Karp
 e. Cosine Similarity
 f. Jaccard Similarity
